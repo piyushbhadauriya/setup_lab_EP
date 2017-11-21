@@ -1,0 +1,26 @@
+config file to get current NTP and DNS info
+listEP file contain IP of all the endpoints
+
+
+# Database
+ Contain all the EndpointInfo elements
+*table1
+ Ip
+ reachable[true/false]
+ EPtype [sip/spark]
+ Model [DX/MX/SX] foreign key [table2]
+ DNS []
+ NTP []
+ manualupdate [true/false] all are false by default.when set to true give a option to set manual NTP and DNS address
+
+* table2
+ Model 
+ Cmd
+
+
+# UI
+ refresh(Get the current config of all the EP and update table 1)
+ Update all(update ntp and DNS if different from config file and manualupdate is false)
+ checkbox to setup manualupdate true and  
+ edit - Update (edit the NTP and DNS setting if manual update true and new != old)  
+ 
